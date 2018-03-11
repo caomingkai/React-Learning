@@ -147,7 +147,7 @@ ReactDOM.render(
  	+ button onclick="activateLasers()"
  - Cannot return false to prevent default behavior in React. You must call preventDefault explicitly
  	+ a href="#" onclick="console.log('The link was clicked.'); return false"
- 	+ 
+ 	+
  	```
  	function ActionLink() {
 	  function handleClick(e) {
@@ -164,7 +164,7 @@ ReactDOM.render(
 	```
  #### be carefull with 'e' & 'this'
 
- ##Conditional Rendering 
+ ## Conditional Rendering 
  #### what?
  display optionally between several components, based on a *state variable*
 
