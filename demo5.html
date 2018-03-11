@@ -13,11 +13,18 @@
 				return <ol>
 				{
 					React.Children.map(props.children, function(child){
-						return <li>{child}></li>;
-					});
+						return <li>{child}</li>;
+					})
 				}
 				</ol>;
 			}
+			ReactDOM.render(
+				<NotesList>
+					<span> hello </span>
+					<span> world </span>
+				</NotesList>,
+				document.body
+			);
 		</script>
 	</body>
 </html>
