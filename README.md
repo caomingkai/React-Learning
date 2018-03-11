@@ -8,12 +8,14 @@
  In order to make faster rendering at client-side, use " $ babel src --out-dir build ", parsing all JSX file at directory 'src' into javascript files at directory 'build', where browser could recognize.
 
  ## 1. ReactDOM.render();
- It is a basic method:
+ #### what?
+ It is a basic method used everywhere
  - converting JSX into HTML;
  - inserting HTML at specified DOM point
 
 
- ## 2. JSX - JavaScript XML
+ ## 2. JSX 
+ #### what?JavaScript XML
  #### "logic" + "view"
  - not spring (no quotes "" )
  - not HTML ( more of XML )
@@ -29,6 +31,7 @@
 
 
  ## 4. Component
+ #### what?
  A component is function,
  - accepting "input"(props), 
  - returnnig "view"(HTML tag)
@@ -62,7 +65,8 @@ ReactDOM.render(
 
 
  ## 5. this.props.children
- All the properties of a Component belongs to its correspoinding HTML element, except "props.children", which represent components' children
+ #### what?
+  All the properties of a Component belongs to its correspoinding HTML element, except "props.children", which represent components' children
 
  #### possible types for children
  - undefined, if no child at all;
@@ -73,6 +77,42 @@ ReactDOM.render(
  use React.Children to ensure validity
 
 
+ ## 6. Composing Components
+ #### What?
+ - A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components.
+ - On the other hand, we typically have an 'App' component at the top level
+ - *Best Practice:* start from bottom-up, work along to the top level
+
+  #### How?
+  Reuse components just like <li> in <ul>
 
 
+ ## 7. Extracting Components
+ #### What?
+ Split components into smaller components, to achieve more flexibility and reusability.
+ #### How?
+ Split by functionality
+ One component can contain multiple sub-components
+
+ ## 8. State and Lifecycle
+ #### Purpose?
+ A non-static component, has its own "state"
+ #### What?
+ Actually it's like pros, but "state" is private to component class, compared to "props"
+ #### How?
+ Must use a **Class Component**, rather than __function component__.
+ #### Diff
+ - this.props(public:passed-in) 表示那些一旦定义，就不再改变的特性
+ - this.state(private:built-in)是会随着用户互动而产生变化的特性。
+ - both are belongs to __this__.
+ #### Constructor of component class
+ First, always call **super(props):**
+ Second, set *this.state=...;**
  
+
+
+
+
+
+
+

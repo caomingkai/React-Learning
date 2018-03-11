@@ -10,9 +10,8 @@
 		<div id="example"></div>
 		<script type="text/babel">
 			function Welcome(props){
-				return 
-				<h1>Hello,
-				{ props.name }
+				return <h1>Hello, 
+				 { props.name }
 				</h1>;
 			}
 
@@ -22,7 +21,7 @@
 					<Welcome name="Tom"/>
 					<Welcome name="Bob"/>
 				</div>,
-				document.body
+				document.getElementById("example")
 			);
 		</script>
 

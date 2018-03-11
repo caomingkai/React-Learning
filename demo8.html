@@ -9,20 +9,26 @@
 	<body>
 		<div id="example"></div>
 		<script type="text/babel">
-			function Welcome(props){
-				return 
-				<h1>Hello,
-				{ props.name }
-				</h1>;
+			class Clock extends React.Component {
+				constructor(props){
+					super(props);
+					this.state = {date:new Date()};
+				}
+
+				render(){
+					return(
+						<div>
+							<h1>Hello, world!</h1>
+							<h2>
+							It is {this.state.date.toLocaleTimeString()}.</h2>
+						</div>
+					);
+				}
 			}
 
 			ReactDOM.render(
-				<div>
-					<Welcome name="Sara"/>
-					<Welcome name="Tom"/>
-					<Welcome name="Bob"/>
-				</div>,
-				document.body
+			  <Clock />,
+			  document.getElementById('example')
 			);
 		</script>
 
