@@ -164,14 +164,14 @@ ReactDOM.render(
 	```
  #### be carefull with 'e' & 'this'
 
- ## Conditional Rendering 
+ ## 11. Conditional Rendering 
  #### what?
  display optionally between several components, based on a *state variable*
 
  #### How?
  Have two _button components_ as child_component of a parent component, toggling state of parent component, then resulting in another _display component_ shows up or hide away. [see demo14]
 
- ## 11. List and keys
+ ## 12. List and keys
 
  #### What?
  - Array can produce a list of 'li', by using _map()_ function.
@@ -181,7 +181,7 @@ ReactDOM.render(
  A good rule of thumb is that elements inside the map() call need keys.
 
 
- ## 12. Forms -> controlled component
+ ## 13. Forms -> controlled component
  #### What ?
  - Let React __"state"__ be the “single source of truth”。
  用React的state来保存form的用户输入
@@ -211,7 +211,7 @@ ReactDOM.render(
  #### Handling Multiple Inputs
  add a name attribute to each element and let the handler function choose what to do based on the value of event.target.name.
 
- ## 13. Lifting State Up ( __share state__ among components in their parent component )
+ ## 14. Lifting State Up ( __share state__ among components in their parent component )
  Sharing state is accomplished by moving it up to the closest common ancestor of the components that need it. This is called **“lifting state up”**. 
 
  #### How
