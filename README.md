@@ -249,7 +249,28 @@ ReactDOM.render(
   #### Inheritance via "Composition"?
   For example, we might say that a WelcomeDialog is a special case of Dialog.
   This can be achieved by composition, where a more “specific” component renders a more “generic” one and configures it with props:
+  ```
+  function Dialog(props) {
+	  return (
+	    <FancyBorder color="blue">
+	      <h1 className="Dialog-title">
+	        {props.title}
+	      </h1>
+	      <p className="Dialog-message">
+	        {props.message}
+	      </p>
+	    </FancyBorder>
+	  );
+	}
+	function WelcomeDialog() {
+	  return (
+	    <Dialog
+	      title="Welcome"
+	      message="Thank you for visiting our spacecraft!" />
 
+	  );
+	}
+  ```
  ## 16. Summary
  #### Steps to build a React App
  - Step 1: Break The UI Into A Component Hierarchy
@@ -284,11 +305,11 @@ ReactDOM.render(
 	+ It conceptually makes sense for the filter text and checked value to live in FilterableProductTable
 
  - Step 5: Add Inverse Data Flow
- #### What?
- 逻辑流：从上到下（ child components depends on __state__ of parent component ）
- 数据流：从下到上（ __state__ of parent component, get value from child component ）
- #### Example
- support data flowing the other way: the form components deep in the hierarchy need to update the state in FilterableProductTable.
+ 	+ What?
+ 		- 逻辑流：从上到下（ child components depends on __state__ of parent component ）
+ 		- 数据流：从下到上（ __state__ of parent component, get value from child component ）
+ 	+ Example
+ 		- support data flowing the other way: the form components deep in the hierarchy need to update the state in FilterableProductTable.
 
 
 
