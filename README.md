@@ -83,8 +83,8 @@ ReactDOM.render(
  - On the other hand, we typically have an 'App' component at the top level
  - *Best Practice:* start from bottom-up, work along to the top level
 
-  #### How?
-  Reuse components just like <li> in <ul>
+ #### How?
+ Reuse components just like "<li>" in "<ul>"
 
 
  ## 7. Extracting Components
