@@ -84,7 +84,7 @@ ReactDOM.render(
  - *Best Practice:* start from bottom-up, work along to the top level
 
  #### How?
- Reuse components just like "<li>" in "<ul>"
+ Reuse components just like "li" in "ul"
 
 
  ## 7. Extracting Components
@@ -102,8 +102,8 @@ ReactDOM.render(
  #### How?
  Must use a **Class Component**, rather than __function component__.
  #### Diff
- - this.props(public:passed-in) 表示那些一旦定义，就不再改变的特性
- - this.state(private:built-in)是会随着用户互动而产生变化的特性。
+ - this.props(*public:passed-in*) 表示那些一旦定义，就不再改变的特性
+ - this.state(*private:built-in*)是会随着用户互动而产生变化的特性。
  - both are belongs to __this__.
  #### Constructor of component class
  First, always call **super(props):**
