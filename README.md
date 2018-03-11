@@ -271,9 +271,7 @@ ReactDOM.render(
 
 	  );
 	}
-	
 	```
-
  ## 16. Summary
  #### Steps to build a React App
  - Step 1: Break The UI Into A Component Hierarchy
