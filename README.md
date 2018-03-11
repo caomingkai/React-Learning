@@ -211,6 +211,8 @@ ReactDOM.render(
  #### Handling Multiple Inputs
  add a name attribute to each element and let the handler function choose what to do based on the value of event.target.name.
 
+
+
  ## 14. Lifting State Up ( __share state__ among components in their parent component )
  Sharing state is accomplished by moving it up to the closest common ancestor of the components that need it. This is called **“lifting state up”**. 
 
@@ -235,4 +237,89 @@ ReactDOM.render(
   6. React calls the render methods of the individual TemperatureInput components with their new props specified by the Calculator. It learns what their UI should look like
 
   7. React DOM updates the DOM to match the desired input values. The input we just edited receives its current value, and the other input is updated to the temperature after conversion.
+
+
+  ## 15. Composition vs Inheritance
+  #### What?
+  React prefer composition model, instead of inheritance, to reuse code between components.
+
+  #### How?
+  Pass **components** to props just like **data**.
+
+  #### Inheritance via "Composition"?
+  For example, we might say that a WelcomeDialog is a special case of Dialog.
+  This can be achieved by composition, where a more “specific” component renders a more “generic” one and configures it with props:
+  ```
+  function Dialog(props) {
+	  return (
+	    <FancyBorder color="blue">
+	      <h1 className="Dialog-title">
+	        {props.title}
+	      </h1>
+	      <p className="Dialog-message">
+	        {props.message}
+	      </p>
+	    </FancyBorder>
+	  );
+	}
+
+	function WelcomeDialog() {
+	  return (
+	    <Dialog
+	      title="Welcome"
+	      message="Thank you for visiting our spacecraft!" />
+
+	  );
+	}
+	```
+
+
+ ## 16. Summary
+ #### Steps to build a React App
+ - Step 1: Break The UI Into A Component Hierarchy
+ 	```
+ 		- FilterableProductTable
+			- SearchBar
+			- ProductTable
+				+ ProductCategoryRow
+				+ ProductRow
+ 	```
+ - Step 2: Build A Static Version in React (more typing, less thinking)
+ 	+ build components that reuse other components and pass data using props.
+ 	+ don’t use state at all to build this static version
+ - Step 3: Identify The Minimal (but complete) Representation Of UI State
+ 	+ To make your UI interactive, you need to be able to trigger changes to your underlying data model. React makes this easy with **state**.
+ 	+ Determine if a data is state by asking three questions:
+ 		- Is it passed in from a parent via props? If so, it probably isn’t state.
+ 		- Does it remain unchanged over time? If so, it probably isn’t state.
+ 		- Can you compute it based on any other state or props in your component? If so, it isn’t state.
+
+ - Step 4: Identify Where Your State Should Live(more thinking, less typing)
+
+ 	+ Identify every component that renders something based on that state. 
+ 	+ Find a common owner component (a single component above all the components that need the state in the hierarchy).
+ 	+ Either the common owner or another component higher up in the hierarchy should own the state.
+ 	+
+ 	If you can’t find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.
+
+ As for the example:
+	+ ProductTable needs to filter the product list based on state and + SearchBar needs to display the search text and checked state.
+	+ The common owner component is FilterableProductTable.
+	+ It conceptually makes sense for the filter text and checked value to live in FilterableProductTable
+
+ - Step 5: Add Inverse Data Flow
+ #### What?
+ 逻辑流：从上到下（ child components depends on __state__ of parent component ）
+ 数据流：从下到上（ __state__ of parent component, get value from child component ）
+ #### Example
+ support data flowing the other way: the form components deep in the hierarchy need to update the state in FilterableProductTable.
+
+
+
+
+
+
+
+
+
 
