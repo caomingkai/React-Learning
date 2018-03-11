@@ -143,10 +143,10 @@ ReactDOM.render(
  #### Diff ( virtual DOM vs. real DOM)
  - React events are named using camelCase, rather than lowercase.
  - With JSX you pass a function as the event handler, rather than a string. 统一采用expression表达方法，写在'{}'中
- 	+ <button onClick={activateLasers}>
- 	+ <button onclick="activateLasers()">
+ 	+ button onClick={activateLasers}
+ 	+ button onclick="activateLasers()"
  - Cannot return false to prevent default behavior in React. You must call preventDefault explicitly
- 	+ <a href="#" onclick="console.log('The link was clicked.'); return false">
+ 	+ a href="#" onclick="console.log('The link was clicked.'); return false"
  	+ 
  	```
  	function ActionLink() {
