@@ -1,11 +1,10 @@
  # React Learning Demos 
 
  ## 0.1 Before diving into project
- - In <head>, we needs 3 <script> in order to use React, that is, "react.js","react-dom.js","browser.min.js"
+ - In <head>, we needs three <script> in order to use React, that is, "react.js","react-dom.js","browser.min.js"
  - In <body> where we manipulate JSX, we use a special <script type="text/babel" >, whose typel is "text/babel"
 
- ## 0.2 After finishing project
- In order to make faster rendering at client-side, use " $ babel src --out-dir build ", parsing all JSX file at directory 'src' into javascript files at directory 'build', where browser could recognize.
+ - In order to make faster rendering at client-side, use " $ babel src --out-dir build ", parsing all JSX file at directory 'src' into javascript files at directory 'build', where browser could recognize.
 
  ## 1. ReactDOM.render();
  #### what?
