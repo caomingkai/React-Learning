@@ -271,8 +271,8 @@ ReactDOM.render(
 
 	  );
 	}
+	
 	```
-
 
  ## 16. Summary
  #### Steps to build a React App
