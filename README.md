@@ -1,6 +1,6 @@
  # React Learning Demos 
 
- ## 0.1 Before diving into project
+ ## 0. Before diving into project
  - In <head>, we needs three <script> in order to use React, that is, "react.js","react-dom.js","browser.min.js"
  - In <body> where we manipulate JSX, we use a special <script type="text/babel" >, whose typel is "text/babel"
 
