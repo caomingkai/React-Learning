@@ -8,5 +8,7 @@
  In order to make faster rendering at client-side, use " $ babel src --out-dir build ", parsing all JSX file at directory 'src' into javascript files at directory 'build', where browser could recognize.
 
  ## 2. ReactDOM.render();
- 
+ It is a basic method:
+ - converting JSX into HTML;
+ - inserting HTML at specified DOM point
 
