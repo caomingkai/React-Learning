@@ -61,7 +61,7 @@ ReactDOM.render(
  Component should have no more than one top tag
 
 
- 5. this.props.children
+ ## 5. this.props.children
  All the properties of a Component belongs to its correspoinding HTML element, except "props.children", which represent components' children
 
  #### possible types for children
