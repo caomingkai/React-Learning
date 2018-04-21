@@ -2,12 +2,13 @@
 
  ## 0. 组件之间传值：
  - 父组件 -> 子组件
-   + 父组件prop 之间传给 子组件 prop
+ 	+ 父组件prop 之间传给 子组件 prop
  
  - 子组件 -> 父组件
-   + 回调函数
-   + 父组件向子组件传递回调函数
-   + JS中，function是一等公民，因此传入的值会作为自身field保存起来；与C／Java不同。
+ 	+ 回调函数
+   	+ 父组件向子组件传递回调函数
+   	+ JS中，function是一等公民，因此传入的值会作为自身field保存起来；与C／Java不同。
+	
  ## 0. Before diving into project
  - In <head>, we needs three <script> in order to use React, that is, "react.js","react-dom.js","browser.min.js"
  - In <body> where we manipulate JSX, we use a special <script type="text/babel" >, whose typel is "text/babel"
