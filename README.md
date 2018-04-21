@@ -8,6 +8,10 @@
  	+ 回调函数
    	+ 父组件向子组件传递回调函数
    	+ JS中，function是一等公民，因此传入的值会作为自身field保存起来；与C／Java不同。
+ - sibling 组件间传值
+ 	+ 必须依靠二者共同父组件来传递
+	+ 但等组件之间的关系越来越复杂时候，这种依靠父组件作为中间人传值方式 would be a mess！
+	+ Redux comes into picture
 	
  ## 0. Before diving into project
  - In <head>, we needs three <script> in order to use React, that is, "react.js","react-dom.js","browser.min.js"
