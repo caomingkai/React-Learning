@@ -1,18 +1,22 @@
  # React Learning Demos 
 
- ## 0. 组件之间传值：
- - 父组件 -> 子组件
+ ## 0. 组件数据流: Model -> View
+ - 父组件M -> 子组件V
  	+ 父组件prop 之间传给 子组件 prop
  
- - 子组件 -> 父组件
+ - 子组件M -> 父组件V
  	+ 回调函数
    	+ 父组件向子组件传递回调函数
    	+ JS中，function是一等公民，因此传入的值会作为自身field保存起来；与C／Java不同。
- - sibling 组件间传值
+ - sibling 组件间传值 M->V
  	+ 必须依靠二者共同父组件来传递
 	+ 但等组件之间的关系越来越复杂时候，这种依靠父组件作为中间人传值方式 would be a mess！
 	+ Redux comes into picture
 	
+ ## 0. 双向绑定: Model <-> View
+ - 通过绑定<input>的 `onChange()` 监视 View的变换
+ - 在 onChange Handler中更新组件的值，完成 View => Model 的数据流。
+
  ## 0. Before diving into project
  - In <head>, we needs three <script> in order to use React, that is, "react.js","react-dom.js","browser.min.js"
  - In <body> where we manipulate JSX, we use a special <script type="text/babel" >, whose typel is "text/babel"
