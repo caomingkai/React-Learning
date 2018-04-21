@@ -1,6 +1,6 @@
  # React Learning Demos 
 
- ## 0. 组件数据流: Model -> View
+ ## 0.1 组件数据流: Model -> View
  - 父组件M -> 子组件V
  	+ 父组件prop 之间传给 子组件 prop
  
@@ -13,11 +13,26 @@
 	+ 但等组件之间的关系越来越复杂时候，这种依靠父组件作为中间人传值方式 would be a mess！
 	+ Redux comes into picture
 	
- ## 0. 双向绑定: Model <-> View
- - 通过绑定<input>的 `onChange()` 监视 View的变换
+ ## 0.2 双向绑定: Model <-> View
+ - 通过绑定`<input>`的 `onChange()` 监视 View的变换
  - 在 onChange Handler中更新组件的值，完成 View => Model 的数据流。
-
- ## 0. Before diving into project
+ ## 0.3 React 生命周期
+ - Mount
+    + constructor()
+    + componentWillMount()
+    + render()
+    + componentDidMount()
+ - Update
+    + componentWillReceiveProps(): 将接收新的props
+    + shouldComponentUpdate(): 是否应该被更新？
+    + componentWillUpdate(): 组件即将更新
+    + render(): 组件被渲染
+    + componentDidUpdate(): 组件完成更新
+ - Unmount
+    + componentWillUnmount(): 组件被卸载前做一些数据清楚哦给你做
+ 
+ 
+ ## 0.4 Before diving into project
  - In <head>, we needs three <script> in order to use React, that is, "react.js","react-dom.js","browser.min.js"
  - In <body> where we manipulate JSX, we use a special <script type="text/babel" >, whose typel is "text/babel"
 
